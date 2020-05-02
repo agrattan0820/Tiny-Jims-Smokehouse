@@ -1,0 +1,121 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #212121;
+  color: white;
+}
+
+.main-container {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+nav a h4 {
+  font-family: "Staatliches", cursive;
+  font-size: 2rem;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a h1 {
+  float: left;
+  font-family: "Underdog", cursive;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}
+
+.menu-container {
+  position: relative;
+  width: 75%;
+  height: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.menu-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/wood-_texture.jpg);
+  border-radius: 15px;
+  background-size: cover;
+  filter: grayscale(1) brightness(0.75);
+}
+
+.tab-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-container h4 {
+  margin: 4rem;
+  font-family: "Staatliches", cursive;
+  font-size: 2rem;
+}
+
+.headline-text {
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  font-size: 8rem;
+  padding: 10rem 6rem 0 6rem;
+  margin: 1rem;
+}
+
+.footer-container {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.social-icon-set {
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  padding: 0.8rem;
+  background-color: #a32e2e;
+  border-radius: 50px;
+}
+
+.social-icon-set img {
+  width: 60px;
+  margin: 0.2rem;
+  transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+}
+
+.social-icon-set img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.footer-information {
+  font-family: "Staatliches", cursive;
+  font-size: 2rem;
+}
