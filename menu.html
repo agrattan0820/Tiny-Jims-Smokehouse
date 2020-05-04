@@ -30,13 +30,52 @@
       </div>
       <div class="menu-container">
         <div class="tab-container">
-          <h4>Appetizers</h4>
-          <h4>Salads</h4>
-          <h4>Entrees</h4>
-          <h4>Sandwichs</h4>
-          <h4>Kids</h4>
+          <button
+            class="tablinks"
+            onclick="openMenuItem(event, 'Appetizers')"
+            id="defaultOpen"
+          >
+            Appetizers
+          </button>
+          <button class="tablinks" onclick="openMenuItem(event, 'Salads')">
+            Salads
+          </button>
+          <button class="tablinks" onclick="openMenuItem(event, 'Entrees')">
+            Entrees
+          </button>
+          <button class="tablinks" onclick="openMenuItem(event, 'Sandwiches')">
+            Sandwiches
+          </button>
+          <button class="tablinks" onclick="openMenuItem(event, 'Kids')">
+            Kids
+          </button>
         </div>
+        <div id="Appetizers" class="tabcontent">
+          <div>
+            <section>
+              <h3>Wings</h3>
+              <p>Half Dozen $11.99 / Dozen $20.99</p>
+            </section>
+            <section>
+              <h3>Loaded Fries</h3>
+              <p>$8.99</p>
+            </section>
+            <section>
+              <h3>Loaded Nachos</h3>
+              <p>$9.99</p>
+            </section>
+          </div>
+          <div><img src="./images/Paulies_BBQ_Beer.jpg" alt="" /></div>
+        </div>
+        <div id="Salads" class="tabcontent">
+          <h1>Billy</h1>
+          <p>Blah Blah Blah 2</p>
+        </div>
+        <div id="Entrees" class="tabcontent"><p>Blah Blah Blah 3</p></div>
+        <div id="Sandwiches" class="tabcontent"><p>Blah Blah Blah 4</p></div>
+        <div id="Kids" class="tabcontent"><p>Blah Blah Blah 5</p></div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
