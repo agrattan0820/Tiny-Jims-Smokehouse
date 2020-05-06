@@ -280,19 +280,22 @@ textarea:focus {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
   header {
-    overflow: hidden;
     position: relative;
     margin-bottom: 3rem;
     width: 100%;
   }
 
-  nav #myLinks {
-    display: none;
-    flex-direction: column;
-    justify-content: start;
+  header a h1 {
+    text-align: center;
+    font-size: 2rem;
     padding: 1rem;
+    float: none;
+  }
+
+  nav #myLinks {
+    justify-content: center;
   }
 
   nav a.icon {
