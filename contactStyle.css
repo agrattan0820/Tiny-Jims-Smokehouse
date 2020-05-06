@@ -226,7 +226,6 @@ textarea:focus {
   box-sizing: content-box;
   font-family: "Staatliches", cursive;
   font-size: 1.5rem;
-  width: 200px;
   color: white;
   border: 5px solid #a32e2e;
   cursor: pointer;
@@ -290,7 +289,7 @@ textarea:focus {
   header a h1 {
     text-align: center;
     font-size: 2rem;
-    padding: 1rem;
+    padding: 0.5rem;
     float: none;
   }
 
@@ -298,23 +297,10 @@ textarea:focus {
     justify-content: center;
   }
 
-  nav a.icon {
-    position: absolute;
-    display: block;
-    color: white;
-    padding: 1rem;
-    top: 20px;
-    right: 0px;
-    border-radius: 50%;
-    transition: ease-in-out 0.3s;
-  }
-
-  nav a.icon:hover {
-    background: black;
-  }
-
-  nav a.icon i {
-    font-size: 2rem;
+  nav #myLinks a h4 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
   }
 
   header a h1 {
@@ -340,12 +326,13 @@ textarea:focus {
 
   .contact-headers h2 {
     margin-top: 0;
+    font-size: 2rem;
   }
 
   .message-form {
     position: relative;
     padding: 2rem;
-    width: 80%;
+    width: 70%;
   }
 
   .message-form::before {
@@ -359,5 +346,19 @@ textarea:focus {
     border-radius: 15px;
     background-size: cover;
     filter: grayscale(1) brightness(0.75);
+  }
+
+  .message-form input,
+  textarea,
+  button {
+    position: relative;
+    padding: 0.8rem;
+    margin: 1.5rem auto;
+    width: 175px;
+  }
+
+  .contact-details h2 {
+    padding: 0.5rem;
+    font-size: 1.5rem;
   }
 }
