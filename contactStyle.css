@@ -1,0 +1,360 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #212121;
+  color: white;
+}
+
+.main-container {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
+}
+
+nav #myLinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav #myLinks a {
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a h4 {
+  font-family: "Staatliches", cursive;
+  font-size: 2rem;
+}
+
+nav a.icon {
+  display: none;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a h1 {
+  float: left;
+  font-family: "Underdog", cursive;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}
+
+nav a.icon {
+  display: none;
+}
+
+.menu-container {
+  position: relative;
+  width: 75%;
+  height: 750px;
+  margin: auto;
+  text-align: center;
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+.menu-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/wood-_texture.jpg);
+  border-radius: 15px;
+  background-size: cover;
+  filter: grayscale(1) brightness(0.75);
+}
+
+.tab-container {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-container button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 2rem 4rem;
+  padding: 14px 16px;
+  border-radius: 15px;
+  transition: ease-in-out 0.3s;
+  font-family: "Staatliches", cursive;
+  font-size: 2rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.tab-container button.active {
+  background-color: #a32e2e;
+}
+
+.tabcontent {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  place-self: center;
+  position: relative;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: "Underdog", cursive;
+  text-align: center;
+  color: white;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+.tabcontent img {
+  width: 50%;
+  line-height: 100vh;
+  border-radius: 15px;
+}
+
+.tabcontent section {
+  padding: 0.8rem;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-container button:hover {
+  text-decoration: underline;
+  transform: scale(1, 1);
+}
+
+.contact-container {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: 75%;
+  height: 750px;
+  font-family: "Staatliches", cursive;
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  letter-spacing: 0.1rem;
+}
+
+.contact-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/wood-_texture.jpg);
+  border-radius: 15px;
+  background-size: cover;
+  filter: grayscale(1) brightness(0.75);
+}
+
+.contact-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  place-items: center;
+  height: 100%;
+}
+
+.contact-headers h2 {
+  font-size: 3rem;
+  padding: 0;
+  margin-top: 100px;
+}
+
+.message-form input,
+textarea,
+button {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem;
+  background: #212121;
+  color: white;
+  border: 5px solid #e5e5e5;
+  outline: none;
+  border-radius: 25px;
+  width: 200px;
+  font-family: sans-serif;
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  transition: ease-in-out 0.3s;
+}
+
+.message-form input:focus,
+textarea:focus {
+  background-color: black;
+}
+
+.message-form textarea {
+  height: 125px;
+}
+
+.message-form label {
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.message-form button {
+  box-sizing: content-box;
+  font-family: "Staatliches", cursive;
+  font-size: 1.5rem;
+  width: 200px;
+  color: white;
+  border: 5px solid #a32e2e;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.message-form button:hover {
+  background: black;
+}
+
+.contact-details h2 {
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.cont .headline-text {
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  font-size: 8rem;
+  padding: 10rem 6rem 0 6rem;
+  margin: 1rem;
+}
+
+.footer-container {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.social-icon-set {
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  padding: 0.8rem;
+  background-color: #a32e2e;
+  border-radius: 50px;
+}
+
+.social-icon-set img {
+  width: 60px;
+  margin: 0.2rem;
+  transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+}
+
+.social-icon-set img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.footer-information {
+  font-family: "Staatliches", cursive;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  nav #myLinks {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1rem;
+  }
+
+  nav a.icon {
+    position: absolute;
+    display: block;
+    color: white;
+    padding: 1rem;
+    top: 20px;
+    right: 0px;
+    border-radius: 50%;
+    transition: ease-in-out 0.3s;
+  }
+
+  nav a.icon:hover {
+    background: black;
+  }
+
+  nav a.icon i {
+    font-size: 2rem;
+  }
+
+  header a h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-container {
+    box-shadow: none;
+  }
+
+  .contact-container::before {
+    background: none;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .item-b {
+    display: none;
+  }
+
+  .contact-headers h2 {
+    margin-top: 0;
+  }
+
+  .message-form {
+    position: relative;
+    padding: 2rem;
+    width: 80%;
+  }
+
+  .message-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/wood-_texture.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    filter: grayscale(1) brightness(0.75);
+  }
+}
