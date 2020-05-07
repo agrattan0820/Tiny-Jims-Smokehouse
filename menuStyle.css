@@ -6,6 +6,7 @@ body {
   height: 100vh;
   background: #212121;
   color: white;
+  overflow: hidden;
 }
 
 .main-container {
@@ -15,12 +16,12 @@ body {
   background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
 }
 
-nav {
+nav #myLinks {
   display: flex;
   justify-content: flex-end;
 }
 
-nav a {
+nav #myLinks a {
   text-decoration: none;
   color: white;
   margin: 0 1rem;
@@ -37,6 +38,8 @@ nav a h4 {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   width: 90%;
   margin: auto;
 }
@@ -78,7 +81,6 @@ header a h1 {
 }
 
 .tab-container {
-  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
@@ -89,12 +91,11 @@ header a h1 {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 2rem 4rem;
+  margin: 2rem 3rem;
   padding: 14px 16px;
   border-radius: 15px;
   transition: ease-in-out 0.3s;
   font-family: "Staatliches", cursive;
-  font-size: 2rem;
   font-size: 2rem;
   color: white;
 }
@@ -178,4 +179,152 @@ header a h1 {
 .footer-information {
   font-family: "Staatliches", cursive;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .tab-container button {
+    margin: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-container {
+    width: 80%;
+    height: 650px;
+  }
+
+  .tab-container button {
+    margin: 2rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .tabcontent {
+    font-size: 1.2rem;
+  }
+
+  .tabcontent img {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  header a h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.5rem;
+    float: none;
+  }
+
+  nav #myLinks {
+    justify-content: center;
+  }
+
+  nav #myLinks a h4 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  header a h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu-container {
+    width: unset;
+    height: 650px;
+  }
+
+  .tab-container {
+    top: 550px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    display: inline;
+  }
+
+  .tab-container button {
+    margin: auto;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+  }
+
+  .tabcontent {
+    font-size: 1.2rem;
+  }
+
+  .tabcontent img {
+    width: 75%;
+  }
+
+  .contact-container {
+    box-shadow: none;
+    margin: auto;
+    padding: 0;
+  }
+
+  .contact-container::before {
+    background: none;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .item-b {
+    display: none;
+  }
+
+  .contact-headers h2 {
+    margin-top: 0;
+    font-size: 3rem;
+  }
+
+  .message-form {
+    position: relative;
+    padding: 2rem;
+    width: 75%;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .message-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/wood-_texture.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    filter: grayscale(1) brightness(0.75);
+  }
+
+  .message-form input,
+  textarea,
+  button {
+    position: relative;
+    padding: 0.8rem;
+    margin: 1.5rem auto;
+    width: 175px;
+  }
+
+  .contact-details h2 {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
 }

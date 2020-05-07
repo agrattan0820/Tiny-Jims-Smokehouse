@@ -63,93 +63,6 @@ nav a.icon {
   display: none;
 }
 
-.menu-container {
-  position: relative;
-  width: 75%;
-  height: 750px;
-  margin: auto;
-  text-align: center;
-  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-}
-
-.menu-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(./images/wood-_texture.jpg);
-  border-radius: 15px;
-  background-size: cover;
-  filter: grayscale(1) brightness(0.75);
-}
-
-.tab-container {
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.tab-container button {
-  background-color: inherit;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 2rem 4rem;
-  padding: 14px 16px;
-  border-radius: 15px;
-  transition: ease-in-out 0.3s;
-  font-family: "Staatliches", cursive;
-  font-size: 2rem;
-  font-size: 2rem;
-  color: white;
-}
-
-.tab-container button.active {
-  background-color: #a32e2e;
-}
-
-.tabcontent {
-  display: none;
-  grid-template-columns: 1fr 1fr;
-  place-self: center;
-  position: relative;
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-family: "Underdog", cursive;
-  text-align: center;
-  color: white;
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
-}
-
-.tabcontent img {
-  width: 50%;
-  line-height: 100vh;
-  border-radius: 15px;
-}
-
-.tabcontent section {
-  padding: 0.8rem;
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.tab-container button:hover {
-  text-decoration: underline;
-  transform: scale(1, 1);
-}
-
 .contact-container {
   position: relative;
   margin: auto;
@@ -243,44 +156,6 @@ textarea:focus {
   font-size: 1.8rem;
 }
 
-.cont .headline-text {
-  text-align: center;
-  font-family: "Staatliches", cursive;
-  font-size: 8rem;
-  padding: 10rem 6rem 0 6rem;
-  margin: 1rem;
-}
-
-.footer-container {
-  text-align: center;
-  margin-top: 12rem;
-}
-
-.social-icon-set {
-  margin: auto;
-  text-align: center;
-  width: 300px;
-  padding: 0.8rem;
-  background-color: #a32e2e;
-  border-radius: 50px;
-}
-
-.social-icon-set img {
-  width: 60px;
-  margin: 0.2rem;
-  transition: ease-in-out 0.3s;
-  -webkit-transition: ease-in-out 0.3s;
-}
-
-.social-icon-set img:hover {
-  transform: scale(1.1, 1.1);
-}
-
-.footer-information {
-  font-family: "Staatliches", cursive;
-  font-size: 2rem;
-}
-
 @media screen and (max-width: 1024px) {
   header a h1 {
     font-size: 2rem;
@@ -288,6 +163,10 @@ textarea:focus {
 
   nav #myLinks a h4 {
     font-size: 1.5rem;
+  }
+
+  .contact-headers h2 {
+    font-size: 2rem;
   }
 }
 
@@ -341,7 +220,7 @@ textarea:focus {
 
   .contact-headers h2 {
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .message-form {

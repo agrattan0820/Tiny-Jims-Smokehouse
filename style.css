@@ -17,12 +17,12 @@ body {
   background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
 }
 
-nav {
+nav #myLinks {
   display: flex;
   justify-content: flex-end;
 }
 
-nav a {
+nav #myLinks a {
   text-decoration: none;
   color: white;
   margin: 0 1rem;
@@ -39,6 +39,8 @@ nav a h4 {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   width: 90%;
   margin: auto;
 }
