@@ -174,7 +174,7 @@ textarea:focus {
   header {
     position: relative;
     flex-direction: column;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     width: 100%;
   }
 
