@@ -6,7 +6,6 @@ body {
   height: 100vh;
   background: #212121;
   color: white;
-  overflow: hidden;
 }
 
 .main-container {
@@ -237,12 +236,12 @@ header a h1 {
   }
 
   .menu-container {
-    height: 500px;
+    height: 450px;
     width: 90%;
   }
 
   .tab-container {
-    top: 550px;
+    top: 475px;
     left: 0;
     width: 100%;
     position: absolute;
@@ -266,6 +265,10 @@ header a h1 {
 
   .tabcontent img {
     width: 90%;
+  }
+
+  .tabcontent section {
+    padding: 0.3rem;
   }
 
   .contact-container {
