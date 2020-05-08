@@ -45,20 +45,37 @@
           <div class="contact-headers item-b"><h2>Contact Details</h2></div>
           <div class="message-form item-c">
             <div>
-              <label for="SendFormName">Your Name:</label>
-              <br />
-              <input type="text" id="SendFormName" />
-              <br />
-              <label for="SendFormEmail">Your Email:</label>
-              <br />
-              <input type="email" id="SendFormEmail" />
-              <br />
-              <label for="">Write Message Here:</label>
-              <br />
-              <textarea id="SendFormMessage"></textarea>
-              <br />
-              <button type="submit">Submit</button>
+              <form action="messageform.php" method="POST">
+                <label for="SendFormName">Your Name:</label>
+                <br />
+                <input
+                  type="text"
+                  name="SendFormName"
+                  id="SendFormName"
+                  required
+                />
+                <br />
+                <label for="SendFormEmail">Your Email:</label>
+                <br />
+                <input
+                  type="email"
+                  name="SendFormEmail"
+                  id="SendFormEmail"
+                  required
+                />
+                <br />
+                <label for="">Write Message Here:</label>
+                <br />
+                <textarea
+                  name="SendFormMessage"
+                  id="SendFormMessage"
+                  required
+                ></textarea>
+                <br />
+                <button type="submit">Submit</button>
+              </form>
             </div>
+            <div id="error"></div>
           </div>
           <div class="contact-details item-d">
             <div>
