@@ -8,6 +8,12 @@
       href="https://fonts.googleapis.com/css2?family=Staatliches&family=Underdog&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <title>Paulie's Smokehouse</title>
   </head>
   <body>
@@ -30,7 +36,9 @@
           </nav>
         </header>
       </div>
-      <div><h1 class="headline-text">BBQ Smoked Fresh</h1></div>
+      <div>
+        <h1 class="headline-text"><span>BBQ</span> Smoked Fresh</h1>
+      </div>
       <div class="social-icon-set">
         <a href="https://www.facebook.com/pauliesbbq/" target="_blank"
           ><img src="./images/facebook.png" alt="Facebook Logo"
@@ -47,6 +55,14 @@
           Dormont, Pennsylvania <br />
           412-341-3473
         </p>
+        <div class="footer-popup-icon" onclick="infoPopUp()">
+          <i class="fa fa-info-circle"></i>
+          <span class="popup-text" id="myPopup"
+            >1426 Potomac Ave. <br />
+            Dormont, Pennsylvania <br />
+            412-341-3473</span
+          >
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

@@ -27,4 +27,9 @@ function dropdownMenu() {
   }
 }
 
+function infoPopUp() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
 document.getElementById("defaultOpen").click();

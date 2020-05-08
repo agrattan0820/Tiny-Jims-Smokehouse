@@ -237,8 +237,8 @@ header a h1 {
   }
 
   .menu-container {
-    width: unset;
-    height: 650px;
+    height: 500px;
+    width: 90%;
   }
 
   .tab-container {
@@ -250,7 +250,7 @@ header a h1 {
     overflow-y: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    display: inline;
+    display: inline-block;
   }
 
   .tab-container button {
@@ -261,11 +261,12 @@ header a h1 {
   }
 
   .tabcontent {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    top: 5px;
   }
 
   .tabcontent img {
-    width: 75%;
+    width: 90%;
   }
 
   .contact-container {

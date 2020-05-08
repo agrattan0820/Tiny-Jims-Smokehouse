@@ -95,3 +95,137 @@ header a h1 {
   font-family: "Staatliches", cursive;
   font-size: 2rem;
 }
+
+.footer-popup-icon {
+  display: none;
+}
+
+.popup-text {
+  visibility: hidden;
+  width: 300 px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 90%;
+  left: 50%;
+  margin-left: -92px;
+  font-size: 2rem;
+  font-family: "Staatliches", cursive;
+}
+
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.footer-popup-icon .popup-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .headline-text {
+    font-size: 7rem;
+    padding: 5rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-container {
+    text-align: center;
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  header a h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.5rem;
+    float: none;
+  }
+
+  nav #myLinks {
+    justify-content: center;
+    margin: 0;
+  }
+
+  nav #myLinks a h4 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  header a h1 {
+    font-size: 1.5rem;
+  }
+
+  .headline-text {
+    font-size: 4rem;
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  .headline-text span {
+    font-size: 10rem;
+  }
+
+  .footer-container {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .footer-information {
+    display: none;
+  }
+
+  .footer-popup-icon {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    font-size: 3rem;
+    padding: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
