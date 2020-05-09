@@ -32,4 +32,14 @@ function infoPopUp() {
   popup.classList.toggle("show");
 }
 
+var telLinks;
+
+if (window.outerWidth > 768) {
+  telLinks = document.querySelectorAll('[href^="tel:"]');
+
+  Array.from(telLinks).forEach(function (link) {
+    link.removeAttribute("href");
+  });
+}
+
 document.getElementById("defaultOpen").click();
