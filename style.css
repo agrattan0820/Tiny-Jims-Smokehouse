@@ -94,6 +94,11 @@ header a h1 {
   font-size: 2rem;
 }
 
+.footer-information a {
+  color: white;
+  font-family: "Staatliches", cursive;
+}
+
 .footer-popup-icon {
   display: none;
 }
@@ -112,6 +117,11 @@ header a h1 {
   left: 50%;
   margin-left: -148px;
   font-size: 2rem;
+  font-family: "Staatliches", cursive;
+}
+
+.popup-text a {
+  color: white;
   font-family: "Staatliches", cursive;
 }
 

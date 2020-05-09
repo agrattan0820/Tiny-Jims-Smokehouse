@@ -156,6 +156,11 @@ textarea:focus {
   font-size: 1.8rem;
 }
 
+.contact-details h2 a {
+  color: white;
+  font-family: "Staatliches", cursive;
+}
+
 @media screen and (max-width: 1024px) {
   header a h1 {
     font-size: 2rem;
