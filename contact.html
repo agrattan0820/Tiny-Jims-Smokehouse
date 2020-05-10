@@ -45,7 +45,12 @@
           <div class="contact-headers item-b"><h2>Contact Details</h2></div>
           <div class="message-form item-c">
             <div>
-              <form action="messageform.php" method="POST" netlify>
+              <form
+                name="ContactForm"
+                method="POST"
+                onsubmit="return validateForm()"
+                netlify
+              >
                 <label for="SendFormName">Your Name:</label>
                 <br />
                 <input

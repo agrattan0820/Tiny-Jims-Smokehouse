@@ -32,6 +32,26 @@ function infoPopUp() {
   popup.classList.toggle("show");
 }
 
+
+function validateForm() {
+  var x = document.forms["ContactForm"]["SendFormName"].value;
+  var y = document.forms["ContactForm"]["SendFormEmail"].value;
+  var z = document.forms["ContactForm"]["SendFormMessage"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  } else if (y == "") {
+    alert("Email must be filled out");
+    return false;
+  } else if (z == "") {
+    alert("Message section must be filled out");
+    return false;
+  } else {
+    alert(Your form has been submitted!);
+    return true;
+  }
+}
+
 var telLinks;
 
 if (window.outerWidth > 768) {
