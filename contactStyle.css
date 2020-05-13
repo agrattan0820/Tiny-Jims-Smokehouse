@@ -153,12 +153,16 @@ textarea:focus {
 
 .contact-details h2 {
   padding: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .contact-details h2 a {
   color: white;
   font-family: "Staatliches", cursive;
+}
+
+.contact-details iframe {
+  padding: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
