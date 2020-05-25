@@ -198,6 +198,16 @@ address {
     float: none;
   }
 
+  nav {
+    position: fixed;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
   nav #myLinks {
     justify-content: center;
   }
