@@ -151,9 +151,11 @@ textarea:focus {
   background: black;
 }
 
-.contact-details h2 {
+.contact-details h2,
+address {
   padding: 1rem;
   font-size: 1.5rem;
+  font-style: normal;
 }
 
 .contact-details h2 a {
