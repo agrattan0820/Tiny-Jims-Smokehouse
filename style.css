@@ -3,45 +3,45 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  color: white;
   background-image: url(./images/jose-ignacio-pompe-s-Z-h0fEiBM-unsplash.jpg);
   background-size: cover;
   background-attachment: fixed;
-  color: white;
 }
 
-.main-container {
-  position: absolute;
+nav {
+  position: fixed;
+  overflow: hidden;
+  background-color: #212121;
+  bottom: 0;
   width: 100%;
-  height: 15%;
-  background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
+  z-index: 5;
 }
 
 nav #myLinks {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
-nav #myLinks a {
+nav #myLinks a h4 {
+  font-family: "Staatliches", cursive;
   text-decoration: none;
   color: white;
-  margin: 0 1rem;
-  padding: 1rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-nav a h4 {
-  font-family: "Staatliches", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 1rem;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: space-around;
+  align-items: center;
   margin: auto;
+  background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 header a {
@@ -50,38 +50,48 @@ header a {
 }
 
 header a h1 {
-  float: left;
   font-family: "Underdog", cursive;
-  font-size: 2.5rem;
-  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 .headline-text {
   text-align: center;
   font-family: "Staatliches", cursive;
-  font-size: 8rem;
-  padding: 10rem 6rem 0 6rem;
-  margin: 1rem;
+  font-size: 3rem;
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
   letter-spacing: 0.3rem;
+}
+
+.headline-text span {
+  font-size: 10rem;
+}
+
+.headline-text span::after {
+  content: "\A";
+  white-space: pre;
 }
 
 .footer-container {
   text-align: center;
-  margin-top: 12rem;
+  margin-top: 0;
 }
 
 .social-icon-set {
-  margin: auto;
+  margin: 1rem auto;
   text-align: center;
-  width: 300px;
-  padding: 0.8rem;
+  width: 200px;
+  padding: 0.5rem;
   background-color: #a32e2e;
   border-radius: 50px;
 }
 
 .social-icon-set img {
-  width: 60px;
-  margin: 0.2rem;
+  width: 50px;
+  margin: 0.3rem;
   transition: ease-in-out 0.3s;
   -webkit-transition: ease-in-out 0.3s;
 }
@@ -91,8 +101,9 @@ header a h1 {
 }
 
 .footer-information {
+  display: none;
   font-family: "Staatliches", cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-style: normal;
 }
 
@@ -102,7 +113,16 @@ header a h1 {
 }
 
 .footer-popup-icon {
-  display: none;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  font-size: 3rem;
+  padding: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .popup-text {
@@ -115,7 +135,7 @@ header a h1 {
   padding: 0.5rem;
   position: absolute;
   z-index: 1;
-  bottom: 90%;
+  bottom: 100%;
   left: 50%;
   margin-left: -148px;
   font-size: 2rem;
@@ -163,111 +183,92 @@ header a h1 {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) and (min-height: 800px) {
+  .headline-text span {
+    font-size: 14rem;
+  }
+
   .headline-text {
-    font-size: 7rem;
-    padding: 5rem 0 0 0;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .footer-container {
-    text-align: center;
-    margin-top: 8rem;
-  }
-
-  .headline-text span::after {
-    content: "\A";
-    white-space: pre;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    position: relative;
-    flex-direction: column;
-    margin-bottom: 0;
-    width: 100%;
-  }
-
-  header a h1 {
-    text-align: center;
-    font-size: 2rem;
-    padding: 0.5rem;
-    float: none;
-  }
-
-  nav {
-    position: fixed;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 5;
-  }
-
-  nav #myLinks {
-    justify-content: center;
-    margin: 0;
-  }
-
-  nav #myLinks a h4 {
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0 0.1rem;
-  }
-
-  header a h1 {
-    font-size: 1.5rem;
+    font-size: 5rem;
   }
 
   .social-icon-set {
-    margin: 1rem auto;
-    text-align: center;
-    width: 200px;
+    width: 250px;
     padding: 0.5rem;
-    background-color: #a32e2e;
-    border-radius: 50px;
   }
-
   .social-icon-set img {
-    width: 50px;
-    margin: 0.3rem;
-    transition: ease-in-out 0.3s;
-    -webkit-transition: ease-in-out 0.3s;
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    flex-direction: row;
+  }
+  header a h1 {
+    font-size: 2.5rem;
   }
 
-  .headline-text {
-    font-size: 3rem;
-    box-sizing: content-box;
-    padding: 0;
-    margin: 0;
+  .headline-text span::after {
+    content: "";
+    white-space: unset;
   }
 
   .headline-text span {
-    font-size: 10rem;
+    font-size: unset;
+  }
+
+  nav {
+    position: static;
+    overflow: hidden;
+    background-color: unset;
+    bottom: unset;
+    width: unset;
+  }
+
+  nav #myLinks a h4 {
+    font-size: 2rem;
+    margin: 0 2rem;
+  }
+
+  nav a h4:hover {
+    text-decoration: underline;
+  }
+
+  .social-icon-set {
+    margin: auto;
+    width: 300px;
+    padding: 0.8rem;
+  }
+
+  .social-icon-set img {
+    width: 60px;
+    margin: 0.2rem;
   }
 
   .footer-container {
+    margin-top: 8rem;
     text-align: center;
-    margin-top: 0;
   }
 
   .footer-information {
-    display: none;
+    display: block;
   }
 
   .footer-popup-icon {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    cursor: pointer;
-    font-size: 3rem;
-    padding: 1rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    display: none;
+  }
+
+  .headline-text {
+    font-size: 7rem;
+    padding: 8rem 4rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .headline-text {
+    font-size: 10rem;
+    padding: 10rem 6rem 0 6rem;
+    margin: 1rem;
   }
 }

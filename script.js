@@ -18,18 +18,14 @@ function openMenuItem(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-function dropdownMenu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
 function infoPopUp() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
+  popup.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center",
+  });
 }
 
 var telLinks;
