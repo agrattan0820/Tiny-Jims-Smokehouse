@@ -8,33 +8,39 @@ body {
   color: white;
 }
 
+nav {
+  position: fixed;
+  overflow: hidden;
+  background: linear-gradient(0deg, #a32e2e 0%, rgba(33, 33, 33, 1) 100%);
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+}
+
 nav #myLinks {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
-nav #myLinks a {
+nav #myLinks a h4 {
+  font-family: "Staatliches", cursive;
   text-decoration: none;
   color: white;
-  margin: 0 1rem;
-  padding: 1rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-nav a h4 {
-  font-family: "Staatliches", cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 1rem;
 }
 
 header {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  align-items: center;
   margin: auto;
   background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 header a {
@@ -43,16 +49,19 @@ header a {
 }
 
 header a h1 {
-  float: left;
   font-family: "Underdog", cursive;
-  font-size: 2.5rem;
-  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.menu-container {
+  height: 450px;
+  width: 90%;
 }
 
 .menu-container {
   position: relative;
-  width: 75%;
-  height: 750px;
   margin: auto;
   text-align: center;
   -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
@@ -74,9 +83,12 @@ header a h1 {
 }
 
 .tab-container {
+  width: 100%;
   position: relative;
-  display: flex;
-  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  display: inline-block;
   padding: 0.5rem 0;
 }
 
@@ -85,12 +97,13 @@ header a h1 {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 2rem 3rem;
-  padding: 14px 16px;
+  margin: auto;
+  font-size: 1.5rem;
+  padding: 0.5rem;
   border-radius: 15px;
   transition: ease-in-out 0.3s;
   font-family: "Staatliches", cursive;
-  font-size: 2rem;
+
   color: white;
 }
 
@@ -104,15 +117,16 @@ header a h1 {
   place-items: center;
   position: relative;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Underdog", cursive;
   text-align: center;
   color: white;
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  animation: fadeEffect 1s; /* 
+  Fading effect takes 1 second */
 }
 
 .tabcontent img {
-  width: 50%;
+  width: 90%;
   border-radius: 15px;
   -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
@@ -120,7 +134,7 @@ header a h1 {
 }
 
 .tabcontent section {
-  padding: 0.8rem;
+  padding: 0.3rem;
 }
 
 @keyframes fadeEffect {
@@ -175,21 +189,46 @@ header a h1 {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1400px) {
-  .tab-container button {
-    margin: 2rem 1.5rem;
+@media screen and (min-width: 800px) {
+  header {
+    flex-direction: row;
   }
-}
+  header a h1 {
+    font-size: 2.5rem;
+  }
 
-@media screen and (max-width: 1024px) {
+  nav {
+    position: static;
+    overflow: hidden;
+    background: unset;
+    bottom: unset;
+    width: unset;
+  }
+
+  nav #myLinks a h4 {
+    font-size: 2rem;
+    margin: 0 2rem;
+  }
+
+  nav a h4:hover {
+    text-decoration: underline;
+  }
   .menu-container {
     width: 80%;
     height: 650px;
   }
 
+  .tab-container {
+    display: flex;
+    justify-content: center;
+    width: unset;
+  }
+
   .tab-container button {
     margin: 2rem 1rem;
     font-size: 1.5rem;
+    padding: 14px 16px;
+    display: inline-block;
   }
 
   .tabcontent {
@@ -199,137 +238,61 @@ header a h1 {
   .tabcontent img {
     width: 75%;
   }
+
+  .tabcontent section {
+    padding: 0.8rem;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    position: relative;
-    flex-direction: column;
-    margin-bottom: 0;
-    width: 100%;
-  }
-
-  header a h1 {
-    text-align: center;
-    font-size: 2rem;
-    padding: 0.5rem;
-    float: none;
-  }
-
-  nav {
-    position: fixed;
-    overflow: hidden;
-    background: linear-gradient(0deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 5;
-  }
-
-  nav #myLinks {
-    justify-content: center;
-  }
-
-  nav #myLinks a h4 {
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0 0.1rem;
-  }
-
-  header a h1 {
-    font-size: 1.5rem;
-  }
-
+@media screen and (max-width: 800px) and (min-height: 736px) {
   .menu-container {
-    height: auto;
-    width: 90%;
-  }
-
-  .tab-container {
-    width: 100%;
-    position: relative;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    display: inline-block;
-  }
-
-  .tab-container button {
-    margin: auto;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    display: inline-block;
+    height: 550px;
   }
 
   .tabcontent {
-    font-size: 1.1rem;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-height: 800px) {
+  .menu-container {
+    height: 600px;
   }
 
-  .tabcontent img {
-    width: 90%;
+  .tabcontent {
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 200px;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    height: 500px;
   }
 
   .tabcontent section {
-    padding: 0.3rem;
+    padding: 0.2rem;
   }
 
-  .contact-container {
-    box-shadow: none;
-    margin: auto;
-    padding: 0;
+  .tabcontent img {
+    width: 50%;
   }
+}
 
-  .contact-container::before {
-    background: none;
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  .item-b {
-    display: none;
-  }
-
-  .contact-headers h2 {
-    margin-top: 0;
-    font-size: 3rem;
-  }
-
-  .message-form {
-    position: relative;
-    padding: 2rem;
+@media screen and (min-width: 1024px) {
+  .menu-container {
     width: 75%;
-    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+    height: 750px;
   }
 
-  .message-form::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(./images/wood-_texture.jpg);
-    border-radius: 15px;
-    background-size: cover;
-    filter: grayscale(1) brightness(0.75);
+  .tab-container button {
+    font-size: 2rem;
+    margin: 2rem 3rem;
   }
 
-  .message-form input,
-  textarea,
-  button {
-    position: relative;
-    padding: 0.8rem;
-    margin: 1.5rem auto;
-    width: 175px;
-  }
-
-  .contact-details h2 {
-    padding: 0.5rem;
+  .tabcontent {
     font-size: 1.5rem;
+  }
+
+  .tabcontent img {
+    width: 50%;
   }
 }

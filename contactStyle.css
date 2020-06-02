@@ -8,37 +8,39 @@ body {
   color: white;
 }
 
+nav {
+  position: fixed;
+  overflow: hidden;
+  background: linear-gradient(0deg, #a32e2e 0%, rgba(33, 33, 33, 1) 100%);
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+}
+
 nav #myLinks {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
-nav #myLinks a {
+nav #myLinks a h4 {
+  font-family: "Staatliches", cursive;
   text-decoration: none;
   color: white;
-  margin: 0 1rem;
-  padding: 1rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-nav a h4 {
-  font-family: "Staatliches", cursive;
-  font-size: 2rem;
-}
-
-nav a.icon {
-  display: none;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 1rem;
 }
 
 header {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  align-items: center;
   margin: auto;
   background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 header a {
@@ -47,30 +49,79 @@ header a {
 }
 
 header a h1 {
-  float: left;
   font-family: "Underdog", cursive;
-  font-size: 2.5rem;
-  padding: 1.5rem;
-}
-
-nav a.icon {
-  display: none;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 .contact-container {
   position: relative;
+  font-family: "Staatliches", cursive;
   margin: auto;
+  padding: 0;
+
   text-align: center;
   width: 75%;
   height: 750px;
-  font-family: "Staatliches", cursive;
-  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
   letter-spacing: 0.1rem;
 }
 
 .contact-container::before {
+  background: none;
+}
+
+.contact-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  place-items: center;
+  height: 100%;
+}
+
+.item-b {
+  display: none;
+}
+
+.contact-headers h2 {
+  margin-top: 0;
+  font-size: 3rem;
+  padding: 0;
+}
+
+.message-form input,
+textarea,
+button {
+  position: relative;
+  padding: 0.8rem;
+  margin: 1.5rem auto;
+
+  background: #212121;
+  color: white;
+  border: 5px solid #e5e5e5;
+  outline: none;
+  border-radius: 25px;
+  width: 175px;
+
+  font-family: sans-serif;
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  transition: ease-in-out 0.3s;
+}
+
+.message-form {
+  position: relative;
+  padding: 2rem;
+  width: 75%;
+  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
+}
+
+.message-form::before {
   content: "";
   position: absolute;
   top: 0;
@@ -81,40 +132,6 @@ nav a.icon {
   border-radius: 15px;
   background-size: cover;
   filter: grayscale(1) brightness(0.75);
-}
-
-.contact-content {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 1fr;
-  place-items: center;
-  height: 100%;
-}
-
-.contact-headers h2 {
-  font-size: 3rem;
-  padding: 0;
-  margin-top: 100px;
-}
-
-.message-form input,
-textarea,
-button {
-  position: relative;
-  padding: 1rem;
-  margin: 1rem;
-  background: #212121;
-  color: white;
-  border: 5px solid #e5e5e5;
-  outline: none;
-  border-radius: 25px;
-  width: 200px;
-  font-family: sans-serif;
-  -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-  transition: ease-in-out 0.3s;
 }
 
 .message-form input:focus,
@@ -147,8 +164,8 @@ textarea:focus {
 
 .contact-details h2,
 address {
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.3rem;
   font-style: normal;
 }
 
@@ -159,97 +176,42 @@ address {
 
 .contact-details iframe {
   padding: 1rem;
-  width: 300px;
-  height: 225px;
+  width: 225px;
+  height: 168.75px;
+  margin-bottom: 4rem;
 }
 
-@media screen and (max-width: 1024px) {
-  header a h1 {
-    font-size: 2rem;
-  }
-
-  nav #myLinks a h4 {
-    font-size: 1.5rem;
-  }
-
-  .contact-headers h2 {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 800px) {
   header {
-    position: relative;
-    flex-direction: column;
-    margin-bottom: 0;
-    width: 100%;
+    flex-direction: row;
   }
-
   header a h1 {
-    text-align: center;
-    font-size: 2rem;
-    padding: 0.5rem;
-    float: none;
+    font-size: 2.5rem;
   }
-
   nav {
-    position: fixed;
+    position: static;
     overflow: hidden;
-    background: linear-gradient(0deg, #a32e2e 0%, rgba(33, 33, 33, 1) 100%);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 5;
-  }
-
-  nav #myLinks {
-    justify-content: center;
+    background: unset;
+    bottom: unset;
+    width: unset;
   }
 
   nav #myLinks a h4 {
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0 0.1rem;
+    font-size: 2rem;
+    margin: 0 2rem;
   }
 
-  header a h1 {
-    font-size: 1.5rem;
+  nav a h4:hover {
+    text-decoration: underline;
   }
 
   .contact-container {
-    box-shadow: none;
-    margin: auto;
-    padding: 0;
-  }
-
-  .contact-container::before {
-    background: none;
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  .item-b {
-    display: none;
-  }
-
-  .contact-headers h2 {
-    margin-top: 0;
-    font-size: 3rem;
-  }
-
-  .message-form {
-    position: relative;
-    padding: 2rem;
-    width: 75%;
     -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
   }
 
-  .message-form::before {
+  .contact-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -262,23 +224,46 @@ address {
     filter: grayscale(1) brightness(0.75);
   }
 
+  .contact-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+  }
+
+  .item-b {
+    display: block;
+  }
+
+  .contact-headers h2 {
+    margin-top: 100px;
+  }
+
+  .message-form::before {
+    background-image: none;
+    box-shadow: none;
+  }
+
   .message-form input,
   textarea,
   button {
     position: relative;
-    padding: 0.8rem;
-    margin: 1.5rem auto;
-    width: 175px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 200px;
   }
 
-  .contact-details h2 {
-    padding: 0.5rem;
-    font-size: 1.3rem;
+  .message-form {
+    box-shadow: none;
+  }
+
+  .contact-details h2,
+  address {
+    padding: 1rem;
+    font-size: 1.5rem;
   }
 
   .contact-details iframe {
-    padding: 1rem;
-    width: 225px;
-    height: 168.75px;
+    width: 300px;
+    height: 225px;
+    margin: 0;
   }
 }
