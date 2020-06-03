@@ -6,11 +6,10 @@ body {
   height: 100vh;
   background: #212121;
   color: white;
-  overflow-x: hidden;
 }
 
 .main-container {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 }
 
 nav {
@@ -33,7 +32,7 @@ nav #myLinks a h4 {
   color: white;
   font-size: 1.5rem;
   padding: 0;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 nav #myLinks a:nth-child(3) {
@@ -202,6 +201,7 @@ address {
   }
   header a h1 {
     font-size: 2.5rem;
+    padding: 0.2rem;
   }
   nav {
     position: static;
