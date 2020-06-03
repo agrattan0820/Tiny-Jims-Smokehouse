@@ -59,7 +59,7 @@ header a h1 {
 .headline-text {
   text-align: center;
   font-family: "Staatliches", cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   box-sizing: content-box;
   padding: 0;
   margin: 0;
@@ -67,7 +67,8 @@ header a h1 {
 }
 
 .headline-text span {
-  font-size: 10rem;
+  font-size: 9rem;
+  line-height: 8rem;
 }
 
 .headline-text span::after {
@@ -117,8 +118,8 @@ header a h1 {
   position: relative;
   text-align: center;
   cursor: pointer;
-  font-size: 3rem;
-  padding: 1rem;
+  font-size: 2.8rem;
+  padding: 0.8rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -185,11 +186,12 @@ header a h1 {
 
 @media screen and (max-width: 800px) and (min-height: 800px) {
   .headline-text span {
-    font-size: 14rem;
+    font-size: 12rem;
+    line-height: 10rem;
   }
 
   .headline-text {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .social-icon-set {
