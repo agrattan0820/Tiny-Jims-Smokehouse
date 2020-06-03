@@ -129,6 +129,15 @@ header a h1 {
   Fading effect takes 1 second */
 }
 
+.tabcontent h3 {
+  line-height: 1.5rem;
+  margin: 0.5rem;
+}
+
+.tabcontent p {
+  letter-spacing: 1px;
+}
+
 .tabcontent img {
   width: min(200px, 75%);
   border-radius: 15px;
