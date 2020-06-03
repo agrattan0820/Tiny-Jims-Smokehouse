@@ -66,7 +66,7 @@ header a h1 {
   padding: 0;
 
   text-align: center;
-  width: 75%;
+  width: 80%;
   height: 750px;
   letter-spacing: 0.1rem;
 }
@@ -183,6 +183,12 @@ address {
   width: 225px;
   height: 168.75px;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 350px) {
+  .contact-container {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 800px) {
