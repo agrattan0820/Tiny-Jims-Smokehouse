@@ -8,6 +8,10 @@ body {
   color: white;
 }
 
+.main-container {
+  padding-bottom: 2rem;
+}
+
 nav {
   position: fixed;
   overflow: hidden;

@@ -9,6 +9,10 @@ body {
   background-attachment: fixed;
 }
 
+.main-container {
+  padding-bottom: 2rem;
+}
+
 nav {
   position: fixed;
   overflow: hidden;
@@ -40,7 +44,7 @@ header {
   background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
   position: relative;
   flex-direction: column;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -67,7 +71,7 @@ header a h1 {
 }
 
 .headline-text span {
-  font-size: 9rem;
+  font-size: 10rem;
   line-height: 8rem;
 }
 
@@ -128,7 +132,7 @@ header a h1 {
 
 .popup-text {
   visibility: hidden;
-  width: 280px;
+  width: 250px;
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -138,8 +142,8 @@ header a h1 {
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -148px;
-  font-size: 2rem;
+  margin-left: -133px;
+  font-size: 1.5rem;
   font-family: "Staatliches", cursive;
   font-style: normal;
 }

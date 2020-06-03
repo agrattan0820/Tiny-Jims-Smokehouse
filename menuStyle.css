@@ -8,6 +8,10 @@ body {
   color: white;
 }
 
+.main-container {
+  padding-bottom: 2rem;
+}
+
 nav {
   position: fixed;
   overflow: hidden;
@@ -39,7 +43,7 @@ header {
   background: linear-gradient(180deg, #a32e2e 0%, rgba(102, 39, 39, 0) 100%);
   position: relative;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
