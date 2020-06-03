@@ -36,6 +36,10 @@ nav #myLinks a h4 {
   margin: 1rem;
 }
 
+nav #myLinks a:nth-child(3) {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: space-around;
@@ -210,6 +214,10 @@ address {
   nav #myLinks a h4 {
     font-size: 2rem;
     margin: 0 2rem;
+  }
+
+  nav #myLinks a:nth-child(3) {
+    display: block;
   }
 
   nav a h4:hover {

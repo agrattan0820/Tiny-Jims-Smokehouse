@@ -25,6 +25,7 @@ nav {
 nav #myLinks {
   display: flex;
   justify-content: space-around;
+  padding: 0 1rem;
 }
 
 nav #myLinks a h4 {
@@ -33,7 +34,11 @@ nav #myLinks a h4 {
   color: white;
   font-size: 1.5rem;
   padding: 0;
-  margin: 1rem;
+  margin: 1rem 0;
+}
+
+nav #myLinks a:nth-child(1) {
+  display: none;
 }
 
 header {
@@ -239,6 +244,10 @@ header a h1 {
   nav #myLinks a h4 {
     font-size: 2rem;
     margin: 0 2rem;
+  }
+
+  nav #myLinks a:nth-child(1) {
+    display: block;
   }
 
   nav a h4:hover {
