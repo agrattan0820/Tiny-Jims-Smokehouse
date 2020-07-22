@@ -10,6 +10,13 @@ Website for a made-up restaurant called Tiny Jim's Smokehouse, named after my da
 ## Why did I make this?
 This was first attempt at designing a website in its entirety in Figma before transitioning into HTML, CSS, and JavaScript. It was a very neat experience in which I learned about in-container tabs as well as how to display a mobile-friendly menu at the bottom.
 
+## Tools Used
+- HTML
+- CSS
+- JavaScript
+- Google Maps API
+- Netlify
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
