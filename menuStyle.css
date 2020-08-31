@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,700&family=Staatliches&family=Underdog&display=swap");
+
 html,
 body {
   margin: 0;
@@ -278,6 +280,11 @@ header a h1 {
 
   .tabcontent section {
     padding: 0.8rem;
+  }
+
+  .imageSlideContainer {
+    position: relative;
+    margin: auto;
   }
 }
 
